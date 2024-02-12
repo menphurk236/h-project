@@ -26,32 +26,19 @@ const Login = () => {
 
     return (
         <main className="form-signin w-100 m-auto">
-            <div className="hero-body">
-                <div className="container">
-                    <div className="columns is-centered">
-                        <div className="column is-4-desktop">
-                            <form onSubmit={Auth} className="box">
-                                <p className="has-text-centered">{msg}</p>
-                                <div className="field mt-5">
-                                    <label className="label">Email or Username</label>
-                                    <div className="controls">
-                                        <input type="text" className="input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div className="field mt-5">
-                                    <label className="label">Password</label>
-                                    <div className="controls">
-                                        <input type="password" className="input" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div className="field mt-5">
-                                    <button className="button is-success is-fullwidth">เข้าสู่ระบบ</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+            <form onSubmit={Auth}>
+                <img className="mb-4" src="https://img2.pic.in.th/pic/Logo98c6bfecfe91ca4b.jpeg" alt="" width={300} height="auto" />
+                <div className="form-floating">
+                    <input type="text" className="form-control" id="floatingInput" placeholder="name@example.com" value={username} onChange={(e) => setUsername(e.target.value)} />
+                    <label htmlFor="floatingInput">Username</label>
                 </div>
-            </div>
+                <div className="form-floating">
+                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <label htmlFor="floatingPassword">Password</label>
+                </div>
+                <button className="btn btn-dark w-100 py-2" type="submit">Sign in</button>
+                <p className="mt-5 mb-3 text-body-secondary">Don't have an account yet ? <a href="/register">Click here</a> to Sign Up</p>
+            </form>
         </main>
     )
 }

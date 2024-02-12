@@ -29,45 +29,35 @@ const Register = () => {
 
     return (
         <main className="form-signin w-100 m-auto">
-            <div className="hero-body">
-                <div className="container">
-                    <div className="columns is-centered">
-                        <div className="column is-4-desktop">
-                            <form onSubmit={Register} className="box">
-                                <p className="has-text-centered">{msg}</p>
-                                <div className="field mt-5">
-                                    <label className="label">Name</label>
-                                    <div className="controls">
-                                        <input type="text" className="input" placeholder="Name"
-                                            value={name} onChange={(e) => setName(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div className="field mt-5">
-                                    <label className="label">Username</label>
-                                    <div className="controls">
-                                        <input type="text" className="input" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div className="field mt-5">
-                                    <label className="label">Password</label>
-                                    <div className="controls">
-                                        <input type="password" className="input" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div className="field mt-5">
-                                    <label className="label">Confirm Password</label>
-                                    <div className="controls">
-                                        <input type="password" className="input" placeholder="******" value={confPassword} onChange={(e) => setConfPassword(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div className="field mt-5">
-                                    <button className="button is-success is-fullwidth">Register</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+            <form onSubmit={Register}>
+                <img className="mb-4" src="https://img2.pic.in.th/pic/Logo98c6bfecfe91ca4b.jpeg" alt="" width={300} height="auto" />
+                <div className="form-floating">
+                    <input type="text" className="form-control" id="username" placeholder="Enter your Username" />
+                    <label htmlFor="floatingInput">Username</label>
                 </div>
-            </div>
+                <div className="form-floating">
+                    <input type="text" className="form-control" id="name" placeholder="Enter your Name" />
+                    <label htmlFor="floatingInput">Name</label>
+                </div>
+                <div className="form-floating">
+                    <input type="text" className="form-control" id="lastname" placeholder="Enter your Lastname" />
+                    <label htmlFor="floatingInput">Lastname</label>
+                </div>
+                <div className="form-floating">
+                    <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label htmlFor="floatingInput">Email address</label>
+                </div>
+                <div className="form-floating">
+                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
+                    <label htmlFor="floatingPassword">Password</label>
+                </div>
+                <div className="form-floating">
+                    <input type="confirm password" className="form-control" id="confirmPassword" placeholder="Confirm Password" />
+                    <label htmlFor="floatingPassword">Confirm Password</label>
+                </div>
+                <button className="btn btn-dark w-100 py-2" type="submit">Sign Up</button>
+                <p className="mt-5 mb-3 text-body-secondary">Already have an account ? <a href="/">Click here</a> to Sign in</p>
+            </form>
         </main>
     )
 }
