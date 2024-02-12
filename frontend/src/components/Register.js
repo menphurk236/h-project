@@ -28,7 +28,7 @@ const Register = () => {
     }
 
     return (
-        <section className="hero has-background-grey-light is-fullheight is-fullwidth">
+        <main className="form-signin w-100 m-auto">
             <div className="hero-body">
                 <div className="container">
                     <div className="columns is-centered">
@@ -68,7 +68,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 

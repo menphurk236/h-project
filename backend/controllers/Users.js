@@ -65,6 +65,22 @@ export const Login = async (req, res) => {
     }
 }
 
+export const UpdateAvatar = async (req, res) => {
+    try {
+        const userId = req.user.userId;
+        const avatar = req.file.filename;
+        await Users.update({ avatar: avatar }, {
+            where: {
+                id: userId
+            }
+        });
+        res.json({ msg: "Avatar Updated" });
+    } catch (error) {
+        res.status(404).json({ msg: "userId not found" });
+    }
+
+}
+
 export const Logout = async (req, res) => {
     const refreshToken = req.cookies.refreshToken;
     if (!refreshToken) return res.sendStatus(204);

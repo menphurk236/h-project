@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './../sigin.css';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -24,7 +25,7 @@ const Login = () => {
     }
 
     return (
-        <section className="hero has-background-grey-light is-fullheight is-fullwidth">
+        <main className="form-signin w-100 m-auto">
             <div className="hero-body">
                 <div className="container">
                     <div className="columns is-centered">
@@ -51,7 +52,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 
