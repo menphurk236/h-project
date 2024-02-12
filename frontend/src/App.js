@@ -5,6 +5,8 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Register from "./components/Register";
 import UploadP from "./components/UploadP";
+import Contact from "./components/Contact";
+import About from "./components/About";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/uploadP" element={<UploadP />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
